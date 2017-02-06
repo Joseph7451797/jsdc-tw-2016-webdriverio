@@ -115,8 +115,13 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: http://webdriver.io/guide/testrunner/reporters.html
-  reporters: ['spec'],
-
+  // reporters: ['spec'],
+     reporters: ['dot', 'allure'],
+     reporterOptions: {
+        allure: {
+            outputDir: 'allure-results'
+        }
+    },
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
@@ -139,12 +144,12 @@ exports.config = {
   //
   // Gets executed before test execution begins. At this point you can access all global
   // variables, such as `browser`. It is the perfect place to define custom commands.
-  before: function(capabilities, specs) {
-    browser.windowHandleSize({
-      width: 375,
-      height: 667
-    });
-  },
+  // before: function(capabilities, specs) {
+  //   browser.windowHandleSize({
+  //     width: 375,
+  //     height: 667
+  //   });
+  // },
   //
   // Hook that gets executed before the suite starts
   // beforeSuite: function (suite) {

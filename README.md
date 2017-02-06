@@ -1,3 +1,13 @@
+## Note:
+
+This is a fork from alincode, some stuff is added to enhance feature.
+Please check the latest commit for more information, and remember to install packsges before running test.
+
+```
+$ npm install
+```
+
+
 # JSDC.tw 2016 Webdriver.IO
 
 **init project**
