@@ -1,7 +1,7 @@
 ## Note:
 
 This is a fork from alincode, some stuff is added to enhance feature.
-Please check the latest commit for more information, and remember to install packsges before running test.
+Please check the latest commit for more information, and remember to install packages before running test.
 
 ```
 $ npm install
