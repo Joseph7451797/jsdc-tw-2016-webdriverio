@@ -7,10 +7,11 @@
   "author": "",
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "clean": "rm -rf ./allure-results",
     "results": "./node_modules/.bin/allure generate ./allure-results && ./node_modules/.bin/allure report open",
-    "demo1": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/demo.js",
-    "demo2": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/demo2.js",
-    "demo3": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/demo3.js"
+    "demo1": "npm run clean && ./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/demo.js && npm run results",
+    "demo2": "npm run clean && ./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/demo2.js && npm run results",
+    "demo3": "npm run clean && ./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/demo3.js && npm run results"
   },
   "repository": {
     "type": "git",
